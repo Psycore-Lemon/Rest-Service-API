@@ -1,4 +1,4 @@
-package ilp.tutorials.simpledemo.entity;
+package ilp.tutorials.simpledemo.entity.Cw1;
 
 public class IsInRegionRequest {
     private Position position;

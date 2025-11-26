@@ -4,11 +4,9 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import ilp.tutorials.simpledemo.entity.DistanceRequest;
-import ilp.tutorials.simpledemo.entity.*;
+import ilp.tutorials.simpledemo.entity.Cw1.*;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -26,16 +24,12 @@ public class BasicController {
     final double STEP_DISTANCE = 0.000015;
     final double CLOSE_THRESHOLD = 0.00015;
 
-    @GetMapping("/uid/{name}")
-    public String studentId(@PathVariable String name)
+    // Coursework 1 //
+
+    @GetMapping("/uid")
+    public String studentId()
     {
-        if (name.equalsIgnoreCase("Fergus"))
-        {
-            return "s2083752";
-        }   
-        else{
-            return "You're name is not in our register, sorry!";
-        }
+        return "s2083752";
     }
     
     @PostMapping("/distanceTo")
@@ -146,5 +140,5 @@ public class BasicController {
         }
     }
 
-
+    
 }
